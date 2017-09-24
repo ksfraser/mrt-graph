@@ -15,4 +15,9 @@ lazy val versions = new {
   val scalatest = "3.0.4"
 }
 
-wartremoverErrors ++= Warts.allBut()
+wartremoverErrors ++= Warts.allBut(
+  Wart.Enumeration,
+  Wart.PublicInference,
+  Wart.Equals,
+  Wart.ToString
+)

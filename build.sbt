@@ -1,5 +1,3 @@
-import Dependencies._
-
 lazy val root = (project in file(".")).
   settings(
     inThisBuild(List(
@@ -8,5 +6,13 @@ lazy val root = (project in file(".")).
       version      := "1.0"
     )),
     name := "mrt-graph",
-    libraryDependencies += scalaTest % Test
+    libraryDependencies ++= Seq(
+      "org.scalatest" %% "scalatest" % versions.scalatest % Test
+    )
   )
+
+lazy val versions = new {
+  val scalatest = "3.0.4"
+}
+
+wartremoverErrors ++= Warts.allBut()

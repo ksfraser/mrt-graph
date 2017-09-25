@@ -17,7 +17,10 @@ lazy val versions = new {
 
 wartremoverErrors ++= Warts.allBut(
   Wart.Enumeration,
-  Wart.PublicInference,
   Wart.Equals,
-  Wart.ToString
+  Wart.ToString,
+  Wart.Throw,
+  Wart.DefaultArguments,
+  Wart.Return,
+  Wart.TraversableOps
 )

@@ -1,4 +1,4 @@
-package com.sgcharts.mrtgraph
+package com.sgcharts.mrt.graph
 
 object RailLine extends Enumeration {
   type RailLine = Value

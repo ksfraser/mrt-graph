@@ -1,6 +1,6 @@
-package com.sgcharts.mrtgraph
+package com.sgcharts.mrt.graph
 
-import com.sgcharts.mrtgraph.RailLine.RailLine
+import RailLine.RailLine
 
 final case class Station(name: String,
                          lines: Set[RailLine]) {

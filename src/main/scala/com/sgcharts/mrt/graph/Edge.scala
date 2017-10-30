@@ -1,4 +1,4 @@
-package com.sgcharts.mrtgraph
+package com.sgcharts.mrt.graph
 
 final case class Edge(left: Station,
                       right: Station,

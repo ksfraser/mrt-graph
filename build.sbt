@@ -2,7 +2,7 @@ lazy val root = (project in file(".")).
   settings(
     inThisBuild(List(
       organization := "com.sgcharts",
-      scalaVersion := "2.12.3",
+      scalaVersion := "2.12.4",
       version      := "1.0"
     )),
     name := "mrt-graph",

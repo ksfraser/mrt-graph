@@ -219,3 +219,93 @@ case object Kranji extends Platform {
   val station: String = "kranji"
   val line: String = NorthSouthLine.name
 }
+
+case object Marsiling extends Platform {
+  val station: String = "marsiling"
+  val line: String = NorthSouthLine.name
+}
+
+case object Woodlands extends Platform {
+  val station: String = "woodlands"
+  val line: String = NorthSouthLine.name
+}
+
+case object Admiralty extends Platform {
+  val station: String = "admiralty"
+  val line: String = NorthSouthLine.name
+}
+
+case object Sembawang extends Platform {
+  val station: String = "sembawang"
+  val line: String = NorthSouthLine.name
+}
+
+case object Yishun extends Platform {
+  val station: String = "yishun"
+  val line: String = NorthSouthLine.name
+}
+
+case object Khatib extends Platform {
+  val station: String = "khatib"
+  val line: String = NorthSouthLine.name
+}
+
+case object YioChuKang extends Platform {
+  val station: String = "yio_chu_kang"
+  val line: String = NorthSouthLine.name
+}
+
+case object AngMoKio extends Platform {
+  val station: String = "ang_mo_kio"
+  val line: String = NorthSouthLine.name
+}
+
+case object Bishan extends Platform {
+  val station: String = "bishan"
+  val line: String = NorthSouthLine.name
+}
+
+case object Braddell extends Platform {
+  val station: String = "braddell"
+  val line: String = NorthSouthLine.name
+}
+
+case object ToaPayoh extends Platform {
+  val station: String = "toa_payoh"
+  val line: String = NorthSouthLine.name
+}
+
+case object Novena extends Platform {
+  val station: String = "novena"
+  val line: String = NorthSouthLine.name
+}
+
+case object Newton extends Platform {
+  val station: String = "newton"
+  val line: String = NorthSouthLine.name
+}
+
+case object Orchard extends Platform {
+  val station: String = "orchard"
+  val line: String = NorthSouthLine.name
+}
+
+case object Somerset extends Platform {
+  val station: String = "somerset"
+  val line: String = NorthSouthLine.name
+}
+
+case object DhobyGhaut extends Platform {
+  val station: String = "dhoby_ghaut"
+  val line: String = NorthSouthLine.name
+}
+
+case object MarinaBay extends Platform {
+  val station: String = "marina_bay"
+  val line: String = NorthSouthLine.name
+}
+
+case object MarinaSouthPier extends Platform {
+  val station: String = "marina_south_pier"
+  val line: String = NorthSouthLine.name
+}

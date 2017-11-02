@@ -4,9 +4,9 @@ import scalax.collection.Graph
 import scalax.collection.edge.WUnDiEdge
 import scalax.collection.edge.Implicits._
 
-object EastWestLine {
+object EastWestLine extends RailLine {
   val name: String = "ewl"
-  val graph: Graph[Station, WUnDiEdge] = Graph(
+  val graph: Graph[Platform, WUnDiEdge] = Graph(
     (PasirRis ~% Tampines) (3),
     (Tampines ~% Simei) (3),
     (TanahMerah ~% Simei) (3),
@@ -20,9 +20,9 @@ object EastWestLine {
     (Kallang ~% Aljunied) (2),
     (Kallang ~% Lavender) (2),
     (Bugis ~% Lavender) (2),
-    (Bugis ~% CityHall) (2),
-    (RafflesPlace ~% CityHall) (2),
-    (RafflesPlace ~% TanjongPagar) (2),
+    (Bugis ~% CityHallEwl) (2),
+    (RafflesPlaceEwl ~% CityHallEwl) (2),
+    (RafflesPlaceEwl ~% TanjongPagar) (2),
     (OutramPark ~% TanjongPagar) (2),
     (OutramPark ~% TiongBahru) (3),
     (Redhill ~% TiongBahru) (2),
@@ -31,8 +31,8 @@ object EastWestLine {
     (Commonwealth ~% BuonaVista) (2),
     (Dover ~% BuonaVista) (2),
     (Dover ~% Clementi) (3),
-    (JurongEast ~% Clementi) (4),
-    (JurongEast ~% ChineseGarden) (3),
+    (JurongEastEwl ~% Clementi) (4),
+    (JurongEastEwl ~% ChineseGarden) (3),
     (Lakeside ~% ChineseGarden) (2),
     (Lakeside ~% BoonLay) (3),
     (Pioneer ~% BoonLay) (1),

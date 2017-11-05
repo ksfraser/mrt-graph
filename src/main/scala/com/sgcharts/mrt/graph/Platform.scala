@@ -100,9 +100,14 @@ case object TanjongPagar extends Platform {
   val line: String = EastWestLine.name
 }
 
-case object OutramPark extends Platform {
+case object OutramParkEwl extends Platform {
   val station: String = "outram_park"
   val line: String = EastWestLine.name
+}
+
+case object OutramParkNel extends Platform {
+  val station: String = "outram_park"
+  val line: String = NorthEastLine.name
 }
 
 case object TiongBahru extends Platform {
@@ -295,9 +300,14 @@ case object Somerset extends Platform {
   val line: String = NorthSouthLine.name
 }
 
-case object DhobyGhaut extends Platform {
+case object DhobyGhautNsl extends Platform {
   val station: String = "dhoby_ghaut"
   val line: String = NorthSouthLine.name
+}
+
+case object DhobyGhautNel extends Platform {
+  val station: String = "dhoby_ghaut"
+  val line: String = NorthEastLine.name
 }
 
 case object MarinaBay extends Platform {
@@ -308,4 +318,74 @@ case object MarinaBay extends Platform {
 case object MarinaSouthPier extends Platform {
   val station: String = "marina_south_pier"
   val line: String = NorthSouthLine.name
+}
+
+case object HarbourFront extends Platform {
+  val station: String = "harbourfront"
+  val line: String = NorthEastLine.name
+}
+
+case object Chinatown extends Platform {
+  val station: String = "chinatown"
+  val line: String = NorthEastLine.name
+}
+
+case object ClarkeQuay extends Platform {
+  val station: String = "clarke_quay"
+  val line: String = NorthEastLine.name
+}
+
+case object LittleIndia extends Platform {
+  val station: String = "little_india"
+  val line: String = NorthEastLine.name
+}
+
+case object FarrerPark extends Platform {
+  val station: String = "farrer_park"
+  val line: String = NorthEastLine.name
+}
+
+case object BoonKeng extends Platform {
+  val station: String = "boon_keng"
+  val line: String = NorthEastLine.name
+}
+
+case object PotongPasir extends Platform {
+  val station: String = "potong_pasir"
+  val line: String = NorthEastLine.name
+}
+
+case object Woodleigh extends Platform {
+  val station: String = "woodleigh"
+  val line: String = NorthEastLine.name
+}
+
+case object Serangoon extends Platform {
+  val station: String = "serangoon"
+  val line: String = NorthEastLine.name
+}
+
+case object Kovan extends Platform {
+  val station: String = "kovan"
+  val line: String = NorthEastLine.name
+}
+
+case object Hougang extends Platform {
+  val station: String = "hougang"
+  val line: String = NorthEastLine.name
+}
+
+case object Buangkok extends Platform {
+  val station: String = "buangkok"
+  val line: String = NorthEastLine.name
+}
+
+case object Sengkang extends Platform {
+  val station: String = "sengkang"
+  val line: String = NorthEastLine.name
+}
+
+case object Punggol extends Platform {
+  val station: String = "punggol"
+  val line: String = NorthEastLine.name
 }

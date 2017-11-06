@@ -7,7 +7,7 @@ import scalax.collection.edge.WUnDiEdge
 object NorthEastLine extends RailLine {
   val name: String = "nel"
   val graph: Graph[Platform, WUnDiEdge] = Graph(
-    (HarbourFront ~% OutramParkNel) (4),
+    (HarbourFrontNel ~% OutramParkNel) (4),
     (Chinatown ~% OutramParkNel) (2),
     (Chinatown ~% ClarkeQuay) (1),
     (DhobyGhautNel ~% ClarkeQuay) (3),
@@ -16,8 +16,8 @@ object NorthEastLine extends RailLine {
     (FarrerPark ~% BoonKeng) (3),
     (PotongPasir ~% BoonKeng) (2),
     (PotongPasir ~% Woodleigh) (1),
-    (Serangoon ~% Woodleigh) (2),
-    (Serangoon ~% Kovan) (3),
+    (SerangoonNel ~% Woodleigh) (2),
+    (SerangoonNel ~% Kovan) (3),
     (Hougang ~% Kovan) (2),
     (Hougang ~% Buangkok) (2),
     (Sengkang ~% Buangkok) (2),

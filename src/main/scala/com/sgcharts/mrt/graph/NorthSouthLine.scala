@@ -20,8 +20,8 @@ object NorthSouthLine extends RailLine {
     (Yishun ~% Khatib) (2),
     (YioChuKang ~% Khatib) (5),
     (YioChuKang ~% AngMoKio) (2),
-    (Bishan ~% AngMoKio) (3),
-    (Bishan ~% Braddell) (2),
+    (BishanNsl ~% AngMoKio) (3),
+    (BishanNsl ~% Braddell) (2),
     (ToaPayoh ~% Braddell) (2),
     (ToaPayoh ~% Novena) (2),
     (Newton ~% Novena) (2),
@@ -30,7 +30,7 @@ object NorthSouthLine extends RailLine {
     (Somerset ~% DhobyGhautNsl) (2),
     (CityHallNsl ~% DhobyGhautNsl) (2),
     (CityHallNsl ~% RafflesPlaceNsl) (2),
-    (MarinaBay ~% RafflesPlaceNsl) (2),
-    (MarinaBay ~% MarinaSouthPier) (1),
+    (MarinaBayNsl ~% RafflesPlaceNsl) (2),
+    (MarinaBayNsl ~% MarinaSouthPier) (1),
   )
 }

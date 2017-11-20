@@ -10,9 +10,14 @@ case object PasirRis extends Platform {
   val line: RailLine = EastWestLine
 }
 
-case object Tampines extends Platform {
+case object TampinesEwl extends Platform {
   val station: String = "tampines"
   val line: RailLine = EastWestLine
+}
+
+case object TampinesDtl extends Platform {
+  val station: String = "tampines"
+  val line: RailLine = DowntownLine
 }
 
 case object Simei extends Platform {
@@ -25,9 +30,14 @@ case object ChangiAirport extends Platform {
   val line: RailLine = EastWestLine
 }
 
-case object Expo extends Platform {
+case object ExpoEwl extends Platform {
   val station: String = "expo"
   val line: RailLine = EastWestLine
+}
+
+case object ExpoDtl extends Platform {
+  val station: String = "expo"
+  val line: RailLine = DowntownLine
 }
 
 case object TanahMerah extends Platform {
@@ -75,9 +85,14 @@ case object Lavender extends Platform {
   val line: RailLine = EastWestLine
 }
 
-case object Bugis extends Platform {
+case object BugisEwl extends Platform {
   val station: String = "bugis"
   val line: RailLine = EastWestLine
+}
+
+case object BugisDtl extends Platform {
+  val station: String = "bugis"
+  val line: RailLine = DowntownLine
 }
 
 case object CityHallEwl extends Platform {
@@ -300,9 +315,14 @@ case object Novena extends Platform {
   val line: RailLine = NorthSouthLine
 }
 
-case object Newton extends Platform {
+case object NewtonNsl extends Platform {
   val station: String = "newton"
   val line: RailLine = NorthSouthLine
+}
+
+case object NewtonDtl extends Platform {
+  val station: String = "newton"
+  val line: RailLine = DowntownLine
 }
 
 case object Orchard extends Platform {
@@ -355,9 +375,14 @@ case object HarbourFrontCcl extends Platform {
   val line: RailLine = CircleLine
 }
 
-case object Chinatown extends Platform {
+case object ChinatownNel extends Platform {
   val station: String = "chinatown"
   val line: RailLine = NorthEastLine
+}
+
+case object ChinatownDtl extends Platform {
+  val station: String = "chinatown"
+  val line: RailLine = DowntownLine
 }
 
 case object ClarkeQuay extends Platform {
@@ -365,9 +390,14 @@ case object ClarkeQuay extends Platform {
   val line: RailLine = NorthEastLine
 }
 
-case object LittleIndia extends Platform {
+case object LittleIndiaNel extends Platform {
   val station: String = "little_india"
   val line: RailLine = NorthEastLine
+}
+
+case object LittleIndiaDtl extends Platform {
+  val station: String = "little_india"
+  val line: RailLine = DowntownLine
 }
 
 case object FarrerPark extends Platform {
@@ -435,14 +465,24 @@ case object Esplanade extends Platform {
   val line: RailLine = CircleLine
 }
 
-case object Bayfront extends Platform {
+case object BayfrontCcl extends Platform {
   val station: String = "bayfront"
   val line: RailLine = CircleLine
 }
 
-case object Promenade extends Platform {
+case object BayfrontDtl extends Platform {
+  val station: String = "bayfront"
+  val line: RailLine = DowntownLine
+}
+
+case object PromenadeCcl extends Platform {
   val station: String = "promenade"
   val line: RailLine = CircleLine
+}
+
+case object PromenadeDtl extends Platform {
+  val station: String = "promenade"
+  val line: RailLine = DowntownLine
 }
 
 case object NicollHighway extends Platform {
@@ -465,9 +505,14 @@ case object Dakota extends Platform {
   val line: RailLine = CircleLine
 }
 
-case object MacPherson extends Platform {
+case object MacPhersonCcl extends Platform {
   val station: String = "macpherson"
   val line: RailLine = CircleLine
+}
+
+case object MacPhersonDtl extends Platform {
+  val station: String = "macpherson"
+  val line: RailLine = DowntownLine
 }
 
 case object TaiSeng extends Platform {
@@ -495,9 +540,14 @@ case object Caldecott extends Platform {
   val line: RailLine = CircleLine
 }
 
-case object BotanicGardens extends Platform {
+case object BotanicGardensCcl extends Platform {
   val station: String = "botanic_gardens"
   val line: RailLine = CircleLine
+}
+
+case object BotanicGardensDtl extends Platform {
+  val station: String = "botanic_gardens"
+  val line: RailLine = DowntownLine
 }
 
 case object FarrerRoad extends Platform {

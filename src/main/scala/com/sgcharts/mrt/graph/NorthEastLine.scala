@@ -8,11 +8,11 @@ object NorthEastLine extends RailLine {
   val name: String = "nel"
   val graph: Graph[Platform, WUnDiEdge] = Graph(
     (HarbourFrontNel ~% OutramParkNel) (4),
-    (Chinatown ~% OutramParkNel) (2),
-    (Chinatown ~% ClarkeQuay) (1),
+    (ChinatownNel ~% OutramParkNel) (2),
+    (ChinatownNel ~% ClarkeQuay) (1),
     (DhobyGhautNel ~% ClarkeQuay) (3),
-    (DhobyGhautNel ~% LittleIndia) (2),
-    (FarrerPark ~% LittleIndia) (1),
+    (DhobyGhautNel ~% LittleIndiaNel) (2),
+    (FarrerPark ~% LittleIndiaNel) (1),
     (FarrerPark ~% BoonKeng) (3),
     (PotongPasir ~% BoonKeng) (2),
     (PotongPasir ~% Woodleigh) (1),

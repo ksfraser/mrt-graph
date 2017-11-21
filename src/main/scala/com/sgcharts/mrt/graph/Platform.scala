@@ -589,3 +589,123 @@ case object TelokBlangah extends Platform {
   val station: String = "telok_blangah"
   val line: RailLine = CircleLine
 }
+
+case object BukitPanjang extends Platform {
+  val station: String = "bukit_panjang"
+  val line: RailLine = DowntownLine
+}
+
+case object Cashew extends Platform {
+  val station: String = "cashew"
+  val line: RailLine = DowntownLine
+}
+
+case object Hillview extends Platform {
+  val station: String = "hillview"
+  val line: RailLine = DowntownLine
+}
+
+case object BeautyWorld extends Platform {
+  val station: String = "beauty_world"
+  val line: RailLine = DowntownLine
+}
+
+case object KingAlbertPark extends Platform {
+  val station: String = "king_albert_park"
+  val line: RailLine = DowntownLine
+}
+
+case object SixthAvenue extends Platform {
+  val station: String = "sixth_avenue"
+  val line: RailLine = DowntownLine
+}
+
+case object TanKahKee extends Platform {
+  val station: String = "tan_kah_kee"
+  val line: RailLine = DowntownLine
+}
+
+case object Stevens extends Platform {
+  val station: String = "stevens"
+  val line: RailLine = DowntownLine
+}
+
+case object Rochor extends Platform {
+  val station: String = "rochor"
+  val line: RailLine = DowntownLine
+}
+
+case object Downtown extends Platform {
+  val station: String = "downtown"
+  val line: RailLine = DowntownLine
+}
+
+case object TelokAyer extends Platform {
+  val station: String = "telok_ayer"
+  val line: RailLine = DowntownLine
+}
+
+case object FortCanning extends Platform {
+  val station: String = "fort_canning"
+  val line: RailLine = DowntownLine
+}
+
+case object Bencoolen extends Platform {
+  val station: String = "bencoolen"
+  val line: RailLine = DowntownLine
+}
+
+case object JalanBesar extends Platform {
+  val station: String = "jalan_besar"
+  val line: RailLine = DowntownLine
+}
+
+case object Bendemeer extends Platform {
+  val station: String = "bendemeer"
+  val line: RailLine = DowntownLine
+}
+
+case object GeylangBahru extends Platform {
+  val station: String = "geylang_bahru"
+  val line: RailLine = DowntownLine
+}
+
+case object Mattar extends Platform {
+  val station: String = "mattar"
+  val line: RailLine = DowntownLine
+}
+
+case object Ubi extends Platform {
+  val station: String = "ubi"
+  val line: RailLine = DowntownLine
+}
+
+case object KakiBukit extends Platform {
+  val station: String = "kaki_bukit"
+  val line: RailLine = DowntownLine
+}
+
+case object BedokNorth extends Platform {
+  val station: String = "bedok_north"
+  val line: RailLine = DowntownLine
+}
+
+case object BedokReservoir extends Platform {
+  val station: String = "bedok_reservoir"
+  val line: RailLine = DowntownLine
+}
+
+case object TampinesWest extends Platform {
+  val station: String = "tampines_west"
+  val line: RailLine = DowntownLine
+}
+
+case object TampinesEast extends Platform {
+  val station: String = "tampines_east"
+  val line: RailLine = DowntownLine
+}
+
+case object UpperChangi extends Platform {
+  val station: String = "upper_changi"
+  val line: RailLine = DowntownLine
+}

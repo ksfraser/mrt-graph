@@ -8,13 +8,15 @@ lazy val root = (project in file(".")).
     name := "mrt-graph",
     libraryDependencies ++= Seq(
       "org.scalatest" %% "scalatest" % versions.scalatest % Test,
-      "org.scala-graph" %% "graph-core" % versions.graphCore
+      "org.scala-graph" %% "graph-core" % versions.graphCore,
+      "com.typesafe" % "config" % versions.config
     )
   )
 
 lazy val versions = new {
   val scalatest = "3.0.4"
   val graphCore = "1.12.1"
+  val config = "1.3.2"
 }
 
 wartremoverErrors ++= Warts.allBut(

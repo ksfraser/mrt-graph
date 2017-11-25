@@ -40,4 +40,11 @@ object Mrt extends RailLine {
     CircleLine.graph ++
     DowntownLine.graph ++
     interchanges
+
+  def main(args: Array[String]): Unit = {
+    val path = graph.get(Sengkang).shortestPathTo(graph.get(SerangoonNel))
+    //val from: graph.NodeT = graph.get(Sengkang).asInstanceOf[graph.NodeT]
+    //val path = from.shortestPathTo(graph.get(SerangoonNel))
+    println(path)
+  }
 }

@@ -28,5 +28,6 @@ wartremoverErrors ++= Warts.allBut(
   Wart.TraversableOps,
   Wart.Product, // required in Graph
   Wart.Serializable, // required in Graph
-  Wart.Any // Graph get returns Any
+  Wart.Any, // Funny ide error, Graph get returns Any
+  Wart.NonUnitStatements // Funny ide error, doc not sync with code
 )

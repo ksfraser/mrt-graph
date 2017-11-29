@@ -42,9 +42,11 @@ object Mrt extends RailLine {
     interchanges
 
   def main(args: Array[String]): Unit = {
-    val path = graph.get(Sengkang).shortestPathTo(graph.get(SerangoonNel))
-    //val from: graph.NodeT = graph.get(Sengkang).asInstanceOf[graph.NodeT]
-    //val path = from.shortestPathTo(graph.get(SerangoonNel))
-    println(path)
+    graph.get(Sengkang).shortestPathTo(graph.get(SerangoonNel)) match {
+      case Some(path) =>
+        println(s"$path\n${path.nodes}\n${path.weight}")
+      case _ => println("Path not found")
+    }
+
   }
 }

@@ -26,6 +26,7 @@ wartremoverErrors ++= Warts.allBut(
   Wart.DefaultArguments,
   Wart.Return,
   Wart.TraversableOps,
+  Wart.MutableDataStructures,
   Wart.Product, // required in Graph
   Wart.Serializable, // required in Graph
   Wart.Any, // Funny ide error, Graph get returns Any

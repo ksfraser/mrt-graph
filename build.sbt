@@ -9,7 +9,9 @@ lazy val root = (project in file(".")).
     libraryDependencies ++= Seq(
       "org.scalatest" %% "scalatest" % versions.scalatest % Test,
       "org.scala-graph" %% "graph-core" % versions.graphCore,
-      "com.typesafe" % "config" % versions.config
+      "com.typesafe" % "config" % versions.config,
+      "ch.qos.logback" % "logback-classic" % versions.logback,
+      "com.typesafe.scala-logging" %% "scala-logging" % versions.scalaLogging
     )
   )
 
@@ -17,6 +19,8 @@ lazy val versions = new {
   val scalatest = "3.0.4"
   val graphCore = "1.12.1"
   val config = "1.3.2"
+  val logback = "1.2.3"
+  val scalaLogging = "3.7.2"
 }
 
 wartremoverErrors ++= Warts.allBut(

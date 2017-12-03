@@ -1,15 +1,31 @@
 package com.sgcharts.mrt.graph
 
 import com.sgcharts.mrt.graph.Mrt.graph
+import com.typesafe.scalalogging.LazyLogging
 
 import scalax.collection.Graph
 import scalax.collection.edge.WUnDiEdge
-import scala.collection.mutable
+import scala.collection.{SortedMap, mutable}
 import scala.collection.mutable.ArrayBuffer
 
-object MrtMain {
+object MrtMain extends LazyLogging {
   def main(args: Array[String]): Unit = {
+    val debug = false
     val g = Mrt.graph
+    if (debug) {
+      shortestPath(g, BedokReservoir, PromenadeDtl)
+    }
+    else {
+      val rmap: SortedMap[Int, ArrayBuffer[Platform]] = rank(g)
+      var i: Int = 0
+      for ((score, ps) <- rmap) {
+        i += 1
+        println(s"#$i ($score): ${ps mkString ","}")
+      }
+    }
+  }
+
+  private def rank(g: Graph[Platform, WUnDiEdge]): SortedMap[Int, ArrayBuffer[Platform]] = {
     val ps: Array[Platform] = g.toOuterNodes.toArray
     val wmap = mutable.Map[String, Int]()
     val smap = mutable.SortedMap[Int, ArrayBuffer[Platform]]()
@@ -21,12 +37,15 @@ object MrtMain {
           val tmp: Int = weight(g, ps(i), ps(j))
           wmap += pair -> tmp
           tmp
-        } else {
+        } else if (j < i) {
           wmap.get(pair) match {
             case Some(v) => v
             case _ =>
               throw new IllegalStateException(s"Map: Path not found between ${ps(i)} and ${ps(j)}")
           }
+        } else {
+          // identity i==j
+          0
         }
         sum += w
       }
@@ -38,6 +57,7 @@ object MrtMain {
           smap += sum -> ArrayBuffer(ps(i))
       }
     }
+    smap
   }
 
   private def weight(g: Graph[Platform, WUnDiEdge], p1: Platform, p2: Platform): Int = {
@@ -64,8 +84,8 @@ object MrtMain {
       case Some(p) =>
         val nodes = p.nodes
         val w = p.weight
-        println(s"$p\n$nodes size=${nodes.size}\nweight=$w")
-      case _ => println("Path not found")
+        logger.info(s"$p\n$nodes size=${nodes.size}\nweight=$w")
+      case _ => logger.warn("Path not found")
     }
   }
 }

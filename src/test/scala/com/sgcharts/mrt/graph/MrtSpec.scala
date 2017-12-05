@@ -13,10 +13,10 @@ class MrtSpec extends FlatSpec {
     }
   }
   it should "return list of nodes between Punggol and SerangoonNel" in {
-    val op = graph.get(Punggol).shortestPathTo(graph.get(SerangoonNel))
+    val op = graph.get(PunggolNel).shortestPathTo(graph.get(SerangoonNel))
     assertResult(false)(op.isEmpty)
     for (p <- op) {
-      assertResult(List(Punggol, SengkangNel, Buangkok, Hougang, Kovan, SerangoonNel))(p.nodes.toList)
+      assertResult(List(PunggolNel, SengkangNel, Buangkok, Hougang, Kovan, SerangoonNel))(p.nodes.toList)
     }
   }
   it should "return list of nodes between Hougang and Redhill" in {

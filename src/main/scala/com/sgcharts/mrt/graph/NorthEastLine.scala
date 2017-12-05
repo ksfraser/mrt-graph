@@ -21,6 +21,6 @@ object NorthEastLine extends RailLine {
     (Hougang ~% Kovan) (2),
     (Hougang ~% Buangkok) (2),
     (SengkangNel ~% Buangkok) (2),
-    (SengkangNel ~% Punggol) (3)
+    (SengkangNel ~% PunggolNel) (3)
   )
 }

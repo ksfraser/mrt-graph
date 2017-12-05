@@ -32,13 +32,17 @@ object Mrt extends RailLine {
     (BayfrontDtl ~% BayfrontCcl) (trainArrivalMinutes + 4),
     (PromenadeDtl ~% PromenadeCcl) (trainArrivalMinutes + 4),
     (MacPhersonDtl ~% MacPhersonCcl) (trainArrivalMinutes + 4),
-    (BotanicGardensDtl ~% BotanicGardensCcl) (trainArrivalMinutes + 4)
+    (BotanicGardensDtl ~% BotanicGardensCcl) (trainArrivalMinutes + 4),
+    (SengkangNel ~% SengkangLrt) (trainArrivalMinutes + 3),
+    (PunggolNel ~% PunggolLrt) (trainArrivalMinutes + 3)
   )
   val graph: Graph[Platform, WUnDiEdge] = EastWestLine.graph ++
     NorthSouthLine.graph ++
     NorthEastLine.graph ++
     CircleLine.graph ++
     DowntownLine.graph ++
+    SengkangLine.graph ++
+    PunggolLine.graph ++
     interchanges
 
 }

@@ -455,9 +455,14 @@ case object SengkangLrt extends Platform {
   val line: RailLine = SengkangLine
 }
 
-case object Punggol extends Platform {
+case object PunggolNel extends Platform {
   val station: String = "punggol"
   val line: RailLine = NorthEastLine
+}
+
+case object PunggolLrt extends Platform {
+  val station: String = "punggol"
+  val line: RailLine = PunggolLine
 }
 
 case object BrasBasah extends Platform {
@@ -778,4 +783,69 @@ case object Kangkar extends Platform {
 case object Ranggung extends Platform {
   val station: String = "ranggung"
   val line: RailLine = SengkangLine
+}
+
+case object SamKee extends Platform {
+  val station: String = "sam_kee"
+  val line: RailLine = PunggolLine
+}
+
+case object PunggolPoint extends Platform {
+  val station: String = "punggol_point"
+  val line: RailLine = PunggolLine
+}
+
+case object Samudera extends Platform {
+  val station: String = "samudera"
+  val line: RailLine = PunggolLine
+}
+
+case object Nibong extends Platform {
+  val station: String = "nibong"
+  val line: RailLine = PunggolLine
+}
+
+case object Sumang extends Platform {
+  val station: String = "sumang"
+  val line: RailLine = PunggolLine
+}
+
+case object SooTeck extends Platform {
+  val station: String = "soo_teck"
+  val line: RailLine = PunggolLine
+}
+
+case object Cove extends Platform {
+  val station: String = "cove"
+  val line: RailLine = PunggolLine
+}
+
+case object Meridian extends Platform {
+  val station: String = "meridian"
+  val line: RailLine = PunggolLine
+}
+
+case object CoralEdge extends Platform {
+  val station: String = "coral_edge"
+  val line: RailLine = PunggolLine
+}
+
+case object Riviera extends Platform {
+  val station: String = "riviera"
+  val line: RailLine = PunggolLine
+}
+
+case object Kadaloor extends Platform {
+  val station: String = "kadaloor"
+  val line: RailLine = PunggolLine
+}
+
+case object Oasis extends Platform {
+  val station: String = "oasis"
+  val line: RailLine = PunggolLine
+}
+
+case object Damai extends Platform {
+  val station: String = "damai"
+  val line: RailLine = PunggolLine
 }

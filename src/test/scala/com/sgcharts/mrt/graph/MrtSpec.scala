@@ -5,10 +5,10 @@ import com.sgcharts.mrt.graph.Mrt._
 
 class MrtSpec extends FlatSpec {
   "Shortest Path" should "return list of nodes between Sengkang and BedokNorth" in {
-    val op = graph.get(Sengkang).shortestPathTo(graph.get(BedokNorth))
+    val op = graph.get(SengkangNel).shortestPathTo(graph.get(BedokNorth))
     assertResult(false)(op.isEmpty)
     for (p <- op) {
-      assertResult(List(Sengkang, Buangkok, Hougang, Kovan, SerangoonNel, SerangoonCcl,
+      assertResult(List(SengkangNel, Buangkok, Hougang, Kovan, SerangoonNel, SerangoonCcl,
         Bartley, TaiSeng, MacPhersonCcl, MacPhersonDtl, Ubi, KakiBukit, BedokNorth))(p.nodes.toList)
     }
   }
@@ -16,7 +16,7 @@ class MrtSpec extends FlatSpec {
     val op = graph.get(Punggol).shortestPathTo(graph.get(SerangoonNel))
     assertResult(false)(op.isEmpty)
     for (p <- op) {
-      assertResult(List(Punggol, Sengkang, Buangkok, Hougang, Kovan, SerangoonNel))(p.nodes.toList)
+      assertResult(List(Punggol, SengkangNel, Buangkok, Hougang, Kovan, SerangoonNel))(p.nodes.toList)
     }
   }
   it should "return list of nodes between Hougang and Redhill" in {

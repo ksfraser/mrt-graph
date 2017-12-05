@@ -445,9 +445,14 @@ case object Buangkok extends Platform {
   val line: RailLine = NorthEastLine
 }
 
-case object Sengkang extends Platform {
+case object SengkangNel extends Platform {
   val station: String = "sengkang"
   val line: RailLine = NorthEastLine
+}
+
+case object SengkangLrt extends Platform {
+  val station: String = "sengkang"
+  val line: RailLine = SengkangLine
 }
 
 case object Punggol extends Platform {
@@ -708,4 +713,69 @@ case object TampinesEast extends Platform {
 case object UpperChangi extends Platform {
   val station: String = "upper_changi"
   val line: RailLine = DowntownLine
+}
+
+case object ChengLim extends Platform {
+  val station: String = "cheng_lim"
+  val line: RailLine = SengkangLine
+}
+
+case object Farmway extends Platform {
+  val station: String = "farmway"
+  val line: RailLine = SengkangLine
+}
+
+case object Kupang extends Platform {
+  val station: String = "kupang"
+  val line: RailLine = SengkangLine
+}
+
+case object Thanggam extends Platform {
+  val station: String = "thanggam"
+  val line: RailLine = SengkangLine
+}
+
+case object Fernvale extends Platform {
+  val station: String = "fernvale"
+  val line: RailLine = SengkangLine
+}
+
+case object Layar extends Platform {
+  val station: String = "layar"
+  val line: RailLine = SengkangLine
+}
+
+case object Tongkang extends Platform {
+  val station: String = "tongkang"
+  val line: RailLine = SengkangLine
+}
+
+case object Renjong extends Platform {
+  val station: String = "renjong"
+  val line: RailLine = SengkangLine
+}
+
+case object Compassvale extends Platform {
+  val station: String = "compassvale"
+  val line: RailLine = SengkangLine
+}
+
+case object Rumbia extends Platform {
+  val station: String = "rumbia"
+  val line: RailLine = SengkangLine
+}
+
+case object Bakau extends Platform {
+  val station: String = "bakau"
+  val line: RailLine = SengkangLine
+}
+
+case object Kangkar extends Platform {
+  val station: String = "kangkar"
+  val line: RailLine = SengkangLine
+}
+
+case object Ranggung extends Platform {
+  val station: String = "ranggung"
+  val line: RailLine = SengkangLine
 }

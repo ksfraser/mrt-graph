@@ -7,7 +7,7 @@ import scalax.collection.edge.WUnDiEdge
 object DowntownLine extends RailLine {
   val name: String = "dtl"
   val graph: Graph[Platform, WUnDiEdge] = Graph(
-    (BukitPanjang ~% Cashew) (1),
+    (BukitPanjangDtl ~% Cashew) (1),
     (Hillview ~% Cashew) (2),
     (Hillview ~% BeautyWorld) (3),
     (KingAlbertPark ~% BeautyWorld) (2),

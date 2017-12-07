@@ -37,13 +37,13 @@ class MrtSpec extends FlatSpec {
     }
   }
   it should "return list of nodes between PasirRis and ChoaChuKang" in {
-    val op = graph.get(PasirRis).shortestPathTo(graph.get(ChoaChuKang))
+    val op = graph.get(PasirRis).shortestPathTo(graph.get(ChoaChuKangNsl))
     assertResult(false)(op.isEmpty)
     for (p <- op) {
       assertResult(List(PasirRis, TampinesEwl, Simei, TanahMerah, Bedok, Kembangan, Eunos,
         PayaLebarEwl, Aljunied, Kallang, Lavender, BugisEwl, CityHallEwl, RafflesPlaceEwl,
         TanjongPagar, OutramParkEwl, TiongBahru, Redhill, Queenstown, Commonwealth, BuonaVistaEwl,
-        Dover, Clementi, JurongEastEwl, JurongEastNsl, BukitBatok, BukitGombak, ChoaChuKang))(p.nodes.toList)
+        Dover, Clementi, JurongEastEwl, JurongEastNsl, BukitBatok, BukitGombak, ChoaChuKangNsl))(p.nodes.toList)
     }
   }
   "Shortest Path (same station, different platform)" should

@@ -9,8 +9,8 @@ object NorthSouthLine extends RailLine {
   val graph: Graph[Platform, WUnDiEdge] = Graph(
     (JurongEastNsl ~% BukitBatok) (3),
     (BukitGombak ~% BukitBatok) (2),
-    (BukitGombak ~% ChoaChuKang) (3),
-    (YewTee ~% ChoaChuKang) (3),
+    (BukitGombak ~% ChoaChuKangNsl) (3),
+    (YewTee ~% ChoaChuKangNsl) (3),
     (YewTee ~% Kranji) (4),
     (Marsiling ~% Kranji) (3),
     (Marsiling ~% Woodlands) (2),

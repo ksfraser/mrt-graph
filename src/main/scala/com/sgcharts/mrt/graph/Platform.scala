@@ -235,9 +235,14 @@ case object BukitGombak extends Platform {
   val line: RailLine = NorthSouthLine
 }
 
-case object ChoaChuKang extends Platform {
+case object ChoaChuKangNsl extends Platform {
   val station: String = "choa_chu_kang"
   val line: RailLine = NorthSouthLine
+}
+
+case object ChoaChuKangLrt extends Platform {
+  val station: String = "choa_chu_kang"
+  val line: RailLine = BukitPanjangLine
 }
 
 case object YewTee extends Platform {
@@ -600,9 +605,14 @@ case object TelokBlangah extends Platform {
   val line: RailLine = CircleLine
 }
 
-case object BukitPanjang extends Platform {
+case object BukitPanjangDtl extends Platform {
   val station: String = "bukit_panjang"
   val line: RailLine = DowntownLine
+}
+
+case object BukitPanjangLrt extends Platform {
+  val station: String = "bukit_panjang"
+  val line: RailLine = BukitPanjangLine
 }
 
 case object Cashew extends Platform {
@@ -848,4 +858,64 @@ case object Oasis extends Platform {
 case object Damai extends Platform {
   val station: String = "damai"
   val line: RailLine = PunggolLine
+}
+
+case object SouthView extends Platform {
+  val station: String = "south_view"
+  val line: RailLine = BukitPanjangLine
+}
+
+case object KeatHong extends Platform {
+  val station: String = "keat_hong"
+  val line: RailLine = BukitPanjangLine
+}
+
+case object TeckWhye extends Platform {
+  val station: String = "teck_whye"
+  val line: RailLine = BukitPanjangLine
+}
+
+case object Phoenix extends Platform {
+  val station: String = "phoenix"
+  val line: RailLine = BukitPanjangLine
+}
+
+case object TenMileJunction extends Platform {
+  val station: String = "ten_mile_junction"
+  val line: RailLine = BukitPanjangLine
+}
+
+case object Petir extends Platform {
+  val station: String = "petir"
+  val line: RailLine = BukitPanjangLine
+}
+
+case object Pending extends Platform {
+  val station: String = "pending"
+  val line: RailLine = BukitPanjangLine
+}
+
+case object Bangkit extends Platform {
+  val station: String = "bangkit"
+  val line: RailLine = BukitPanjangLine
+}
+
+case object Fajar extends Platform {
+  val station: String = "fajar"
+  val line: RailLine = BukitPanjangLine
+}
+
+case object Segar extends Platform {
+  val station: String = "segar"
+  val line: RailLine = BukitPanjangLine
+}
+
+case object Jelapang extends Platform {
+  val station: String = "jelapang"
+  val line: RailLine = BukitPanjangLine
+}
+
+case object Senja extends Platform {
+  val station: String = "senja"
+  val line: RailLine = BukitPanjangLine
 }

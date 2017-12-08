@@ -1,6 +1,5 @@
 package com.sgcharts.mrt.graph
 
-import com.sgcharts.mrt.graph.Mrt.graph
 import com.typesafe.scalalogging.LazyLogging
 
 import scalax.collection.Graph
@@ -32,7 +31,7 @@ object MrtMain extends LazyLogging {
     for (i <- ps.indices) {
       var sum: Int = 0
       for (j <- ps.indices) {
-        val pair: String = pairToString(ps(i), ps(j))
+        val pair: String = Platform.pairToString(ps(i), ps(j))
         val w: Int = if (j > i) {
           val tmp: Int = weight(g, ps(i), ps(j))
           wmap += pair -> tmp
@@ -66,16 +65,6 @@ object MrtMain extends LazyLogging {
         path.weight.toInt
       case _ =>
         throw new IllegalStateException(s"Graph: Path not found between $p1 and $p2")
-    }
-  }
-
-  private def pairToString(p1: Platform, p2: Platform): String = {
-    val s1 = s"${p1.station}_${p1.line.name}"
-    val s2 = s"${p2.station}_${p2.line.name}"
-    if (s1.compare(s2) > 0) {
-      s"$s2,$s1"
-    } else {
-      s"$s1,$s2"
     }
   }
 

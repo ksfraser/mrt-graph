@@ -5,6 +5,18 @@ sealed trait Platform {
   val line: RailLine
 }
 
+object Platform {
+  private[graph] def pairToString(p1: Platform, p2: Platform): String = {
+    val s1 = s"${p1.station}_${p1.line.name}"
+    val s2 = s"${p2.station}_${p2.line.name}"
+    if (s1.compare(s2) > 0) {
+      s"$s2,$s1"
+    } else {
+      s"$s1,$s2"
+    }
+  }
+}
+
 case object PasirRis extends Platform {
   val station: String = "pasir_ris"
   val line: RailLine = EastWestLine

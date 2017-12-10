@@ -1,26 +1,18 @@
 package com.sgcharts.mrt.graph
 
-import com.typesafe.scalalogging.LazyLogging
-
+import scala.collection.mutable.ArrayBuffer
+import scala.collection.{SortedMap, mutable}
 import scalax.collection.Graph
 import scalax.collection.edge.WUnDiEdge
-import scala.collection.{SortedMap, mutable}
-import scala.collection.mutable.ArrayBuffer
 
-object MrtMain extends LazyLogging {
+object MrtMain {
   def main(args: Array[String]): Unit = {
-    val debug = false
     val g = Mrt.graph
-    if (debug) {
-      shortestPath(g, BedokReservoir, PromenadeDtl)
-    }
-    else {
-      val rmap: SortedMap[Int, ArrayBuffer[Platform]] = rank(g)
-      var i: Int = 0
-      for ((score, ps) <- rmap) {
-        i += 1
-        println(s"#$i ($score): ${ps mkString ","}")
-      }
+    val rmap: SortedMap[Int, ArrayBuffer[Platform]] = rank(g)
+    var i: Int = 0
+    for ((score, ps) <- rmap) {
+      i += 1
+      println(s"#$i ($score): ${ps mkString ","}")
     }
   }
 
@@ -65,16 +57,6 @@ object MrtMain extends LazyLogging {
         path.weight.toInt
       case _ =>
         throw new IllegalStateException(s"Graph: Path not found between $p1 and $p2")
-    }
-  }
-
-  private def shortestPath(graph: Graph[Platform, WUnDiEdge], from: Platform, to: Platform): Unit = {
-    graph.get(from).shortestPathTo(graph.get(to)) match {
-      case Some(p) =>
-        val nodes = p.nodes
-        val w = p.weight
-        logger.info(s"$p\n$nodes size=${nodes.size}\nweight=$w")
-      case _ => logger.warn("Path not found")
     }
   }
 }

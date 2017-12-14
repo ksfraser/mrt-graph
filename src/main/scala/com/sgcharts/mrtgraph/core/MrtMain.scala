@@ -12,7 +12,7 @@ object MrtMain {
     var i: Int = 0
     for ((score, ps) <- rmap) {
       i += 1
-      println(s"#$i ($score): ${ps mkString ","}")
+      println(s"$i. ($score): ${ps mkString ","}")
     }
   }
 

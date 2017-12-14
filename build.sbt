@@ -3,9 +3,9 @@ lazy val root = (project in file(".")).
     inThisBuild(List(
       organization := "com.sgcharts",
       scalaVersion := "2.12.4",
-      version      := "1.0"
+      version      := "1.0.0-SNAPSHOT"
     )),
-    name := "mrt-graph",
+    name := "mrt-graph-core",
     libraryDependencies ++= Seq(
       "org.scalatest" %% "scalatest" % versions.scalatest % Test,
       "org.scala-graph" %% "graph-core" % versions.graphCore,

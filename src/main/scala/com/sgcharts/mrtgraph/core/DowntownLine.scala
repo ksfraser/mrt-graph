@@ -1,4 +1,4 @@
-package com.sgcharts.mrt.graph
+package com.sgcharts.mrtgraph.core
 
 import scalax.collection.Graph
 import scalax.collection.edge.Implicits._

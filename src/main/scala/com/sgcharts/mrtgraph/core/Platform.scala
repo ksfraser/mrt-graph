@@ -1,4 +1,4 @@
-package com.sgcharts.mrt.graph
+package com.sgcharts.mrtgraph.core
 
 sealed trait Platform {
   val station: String
@@ -6,7 +6,7 @@ sealed trait Platform {
 }
 
 object Platform {
-  private[graph] def pairToString(p1: Platform, p2: Platform): String = {
+  private[core] def pairToString(p1: Platform, p2: Platform): String = {
     val s1 = s"${p1.station}_${p1.line.name}"
     val s2 = s"${p2.station}_${p2.line.name}"
     if (s1.compare(s2) > 0) {

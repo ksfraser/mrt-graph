@@ -1,8 +1,7 @@
 package com.sgcharts.mrtgraph.core
 
 import org.scalatest.FlatSpec
-import com.sgcharts.mrt.graph.Mrt._
-import com.sgcharts.mrt.graph._
+import com.sgcharts.mrtgraph.core.Mrt._
 
 class MrtSpec extends FlatSpec {
   "Shortest Path" should "return list of nodes between Sengkang and BedokNorth" in {

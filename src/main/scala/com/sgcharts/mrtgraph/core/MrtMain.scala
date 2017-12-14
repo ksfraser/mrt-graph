@@ -1,4 +1,4 @@
-package com.sgcharts.mrt.graph
+package com.sgcharts.mrtgraph.core
 
 import scala.collection.mutable.ArrayBuffer
 import scala.collection.{SortedMap, mutable}

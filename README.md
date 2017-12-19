@@ -1,6 +1,10 @@
 # mrt-graph
+MRT train platforms ranked by centrality, defined by the minimal time taken to travel from one platform to all other platforms. 
 
+(Centrality score in parentheses, lower is better)
 ```
+Nsl=North South Line, Ewl=East West Line, Nel=North East Line, Ccl=Circle Line, Dtl=Downtown Line
+
 1. (4700): LittleIndiaDtl
 2. (4757): NewtonDtl
 3. (4769): Rochor
@@ -174,3 +178,12 @@
 171. (10749): TuasWestRoad
 172. (11292): TuasLink
 ```
+## Methodology
+The MRT networt is represented as an undirected graph using [`scalax.collection.Graph`](http://www.scala-graph.org/).
+- Nodes are train platforms
+- Edges mean that platforms are either connected by train service, or interchange transfer (walking)
+- Edge weight is the travelling time in minutes
+
+## Data Sources
+- MRT map and train travel times from LTA MyTransport app, SMRT, SBST
+- Walking times and expected train arrival times are unofficial estimates, and configurable

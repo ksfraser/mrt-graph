@@ -191,8 +191,10 @@ Time taken to travel from one platform to another
 - Starts when boarding at the origin platform
 - Ends when alighting at the destination platform
 - Includes interchange transfers: walking, waiting for the next train
-  - Walking times and expected train arrival times are unofficial estimates, and [configurable](https://github.com/seahrh/mrt-graph/blob/master/src/main/resources/application.conf)
+  - Transfer times are unofficial estimates, and [configurable](https://github.com/seahrh/mrt-graph/blob/master/src/main/resources/application.conf)
 
-[Closeness centrality](https://en.wikipedia.org/wiki/Closeness_centrality) is the sum of the lengths of the shortest paths between one platform and all other platforms. The centrality score is therefore
+[Closeness centrality](https://en.wikipedia.org/wiki/Closeness_centrality) is the sum of the lengths of the shortest paths between one platform and all other platforms.
+- Since edge weight is in minutes, likewise for centrality
+- Platforms are ranked by the centrality score (lower is better)
 ## Data Sources
 MRT map and train travel times from LTA MyTransport app, SMRT, SBST

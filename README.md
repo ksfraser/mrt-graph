@@ -180,7 +180,7 @@ Nsl=North South Line, Ewl=East West Line, Nel=North East Line, Ccl=Circle Line, 
 ```
 ## Methodology
 ### Graph data structure
-The MRT networt is represented as an undirected graph using [`scalax.collection.Graph`](http://www.scala-graph.org/).
+The MRT network is represented as an undirected graph using [`scalax.collection.Graph`](http://www.scala-graph.org/).
 - Nodes are train platforms
 - Edges mean that platforms are either connected by train service, or interchange transfer (walking)
 - Edge weight is the travelling time in minutes

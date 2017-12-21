@@ -185,7 +185,7 @@ The MRT network is represented as an undirected graph using [`scalax.collection.
 - Edges mean that platforms are either connected by train service, or interchange transfer (walking)
 - Edge weight is the travelling time in minutes
 - Shortest path computed with [Dijkstra's algorithm](https://medium.com/basecs/finding-the-shortest-path-with-a-little-help-from-dijkstra-613149fbdc8e) ([Library implementation](https://github.com/scala-graph/scala-graph/blob/master/core/src/main/scala/scalax/collection/TraverserImpl.scala#L296))
-
+### Travel time
 Time taken to travel from one platform to another 
 - Starts when boarding at the origin platform
 - Ends when alighting at the destination platform

@@ -1,5 +1,5 @@
 # mrt-graph
-MRT train platforms ranked by centrality, defined by the minimal time taken to travel from one platform to all other platforms. 
+MRT train platforms ranked by centrality, defined as the minimal time taken to travel from one platform to all other platforms. 
 
 (Centrality score in parentheses, lower is better)
 ```

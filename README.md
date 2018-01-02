@@ -1,6 +1,10 @@
 # mrt-graph
+MRT train platforms ranked by centrality, defined as the minimal time taken to travel from one platform to all other platforms. 
 
+(Centrality score in parentheses, lower is better)
 ```
+Nsl=North South Line, Ewl=East West Line, Nel=North East Line, Ccl=Circle Line, Dtl=Downtown Line
+
 1. (4700): LittleIndiaDtl
 2. (4757): NewtonDtl
 3. (4769): Rochor
@@ -174,3 +178,22 @@
 171. (10749): TuasWestRoad
 172. (11292): TuasLink
 ```
+## Methodology
+### Graph data structure
+The MRT network is represented as an undirected weighted graph using [`scalax.collection.Graph`](http://www.scala-graph.org/).
+- Nodes are train platforms
+- Edges mean that platforms are either connected by train service, or interchange transfer (walking)
+- Edge weight is the travelling time in minutes
+- Shortest path computed with [Dijkstra's algorithm](https://medium.com/basecs/finding-the-shortest-path-with-a-little-help-from-dijkstra-613149fbdc8e) ([Library implementation](https://github.com/scala-graph/scala-graph/blob/master/core/src/main/scala/scalax/collection/TraverserImpl.scala#L296))
+### Travel time
+Time taken to travel from one platform to another 
+- Starts when boarding at the origin platform
+- Ends when alighting at the destination platform
+- Includes interchange transfers: walking, waiting for the next train
+  - Transfer times are unofficial estimates, and [configurable](https://github.com/seahrh/mrt-graph/blob/master/src/main/resources/application.conf)
+### Centrality
+[Closeness centrality](https://en.wikipedia.org/wiki/Closeness_centrality) is the sum of the lengths of the shortest paths between one platform and all other platforms.
+- Since edge weight is in minutes, likewise for centrality
+- Platforms are ranked by the centrality score (lower is better)
+## Data Sources
+MRT map and train travel times from LTA MyTransport app, SMRT, SBST

@@ -17,7 +17,7 @@ lazy val root = (project in file(".")).
 
 lazy val versions = new {
   val scalatest = "3.0.4"
-  val graphCore = "1.12.1"
+  val graphCore = "1.12.2"
   val config = "1.3.2"
   val logback = "1.2.3"
   val scalaLogging = "3.7.2"
@@ -34,6 +34,6 @@ wartremoverErrors ++= Warts.allBut(
   Wart.Var,
   Wart.Product, // required in Graph
   Wart.Serializable, // required in Graph
-  Wart.Any, // Funny ide error, Graph get returns Any
-  Wart.NonUnitStatements // Funny ide error, doc not sync with code
+  Wart.Any, // Graph get returns Any
+  Wart.NonUnitStatements // Collections add `+=` is Unit statement
 )
